@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function CarCard({ car }) {
     return (
-        <div style={{ border: '1px solid black', padding: '10px', cursor: 'pointer' }} onClick={() => window.location.href = `/cars/${car.id}`}>{car.name}</div>
+        <div style={{ border: '1px solid black', padding: '10px', cursor: 'pointer' }} onClick={() => window.location.href = `/api/cars/${car.id}`}>{car.name}</div>
     );
 }
 
@@ -14,7 +14,7 @@ function App() {
     React.useEffect(() => {
         axios.get('/api/cars/').then(response => {
             setCars(response.data);
-        });
+        }).catch(error => console.log(error));
     }, []);
 
     return (
