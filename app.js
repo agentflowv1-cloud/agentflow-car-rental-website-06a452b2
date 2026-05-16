@@ -4,7 +4,9 @@ import axios from 'axios';
 
 function CarCard({ car }) {
     return (
-        <div style={{ border: '1px solid black', padding: '10px', cursor: 'pointer' }} onClick={() => window.location.href = `/api/cars/${car.id}`}>{car.name}</div>
+        <div style={{ border: '1px solid black', padding: '10px', cursor: 'pointer' }} onClick={() => window.location.href = `/api/cars/${car.id}`}>
+            {car.name}
+        </div>
     );
 }
 
