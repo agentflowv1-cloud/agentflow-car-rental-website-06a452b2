@@ -10,8 +10,7 @@ class Car(BaseModel):
     name: str
     description: str
 
-# Mock data for demo purposes
- cars = [
+cars = [
     Car(id=1, name='Toyota', description='Toyota is a Japanese car manufacturer'),
     Car(id=2, name='Ford', description='Ford is an American car manufacturer'),
     Car(id=3, name='Honda', description='Honda is a Japanese car manufacturer')
