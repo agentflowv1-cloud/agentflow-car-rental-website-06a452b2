@@ -12,7 +12,7 @@ function App() {
     const [cars, setCars] = React.useState([]);
 
     React.useEffect(() => {
-        axios.get('/cars/').then(response => {
+        axios.get('/api/cars/').then(response => {
             setCars(response.data);
         });
     }, []);
