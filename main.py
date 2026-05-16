@@ -17,11 +17,11 @@ class Car(BaseModel):
     Car(id=3, name='Honda', description='Honda is a Japanese car manufacturer')
 ]
 
-@app.get('/cars/')
+@app.get('/api/cars/')
 async def read_cars():
     return JSONResponse(content=[car.dict() for car in cars], media_type='application/json')
 
-@app.get('/cars/{car_id}')
+@app.get('/api/cars/{car_id}')
 async def read_car(car_id: int):
     car = next((car for car in cars if car.id == car_id), None)
     if car is None:
